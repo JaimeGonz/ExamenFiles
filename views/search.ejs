@@ -1,0 +1,25 @@
+<%- include("template/head", {tituloWeb: 'Add'}) %> 
+<%- include("template/header") %> 
+
+    <body>
+        <section>
+            <div class="container">
+                <div class="box card__note">
+                    <div class="field">
+                        <label for="POST_title" class="label label__note">Nombre</label>
+                        <div class="control input__note">
+                            <input class="input " type="text" placeholder="Documento 1" name="title" value="<%= title %>" disabled>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="POST_body" class="label label__note">Contenido</label>
+                        <div class="control input__note">
+                        <textarea id="" name="body" class="textarea" placeholder="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae laudantium quos placeat tenetur, impedit, ab dolorum hic doloremque animi culpa veniam ea consequuntur in explicabo ad atque optio, ipsam quasi!" disabled >
+                        <%= text %>    
+                        </textarea>  
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

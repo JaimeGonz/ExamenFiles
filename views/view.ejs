@@ -1,0 +1,36 @@
+<%- include("template/head", {tituloWeb: 'Add'}) %> 
+<%- include("template/header") %> 
+
+    <body>
+        <section>
+            <h1 class="title">Archivos actuales</h1>
+            <div class="container select-files">
+                <p class="subt">Ver archivo: </p>
+                <select class="files" name="forma" onchange="location = this.value;">
+                    <% files.forEach(function(file){ %>
+                        <option value="/edit/<%= file %>"><%= file %></option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <table class="table tabla-list">
+                <thead class="">
+                    <tr>
+                        <th class="header-title" scope="col">File title</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <% files.forEach(function(file){ %>
+                    <tr>
+                        <td class="titles"><%= file %></td>
+                        <td class="titles"><a href="/edit/<%= file %>"> Edit </a></td>
+                        <td class="titles"><a class="remove" href="/remove/<%= file %>"> Remove </a></td>
+                    </tr>
+                <% }); %>
+            </table>
+
+            
+        </section>
+    </body>
+</html>
